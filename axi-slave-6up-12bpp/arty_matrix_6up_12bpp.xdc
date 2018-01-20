@@ -18,3 +18,5 @@ set_property -dict { PACKAGE_PIN J18  IOSTANDARD LVCMOS33 } [get_ports { latch }
 set_property -dict { PACKAGE_PIN K15  IOSTANDARD LVCMOS33 } [get_ports { sclk }];   #Sch=JB9
 # set_property -dict { PACKAGE_PIN J15  IOSTANDARD LVCMOS33 } [get_ports {  }];     #Sch=JB10
 
+set_clock_groups -asynchronous -group [get_clocks { clk_pll_i }]  \
+                               -group [get_clocks { clk_out3_system_clk_wiz_0_0 }];
